@@ -1,2 +1,2 @@
-# github_to_blih_sync
+# GitHubToBlih
 Synchronize your GitHub repository to blih. (Epitech)
