@@ -9,21 +9,23 @@ if [[ $# != 1 ]]; then
     exit 1
 fi
 
-TMP_DIR="blih"
+TMP_DIR="./tmp_blih"
 
-USER_GHUB="GITHUB_USERNAME_HERE"
-USER_BLIH="BLIH_LOGIN_HERE"
+# Define it in your environment or fill in your usernames
+USER_GHUB="$USER_GHUB"
+USER_BLIH="$USER_BLIH"
 
 REPO_GHUB="$1"
 REPO_BLIH="$1"
 
-mkdir -p $TMP_DIR
-rm -rf $TMP_DIR/*
+set -xe
 
-git clone --bare git@github.com:$USER_GHUB/$REPO_GHUB.git $TMP_DIR
+rm -rf $TMP_DIR
+mkdir $TMP_DIR
 
+git clone --bare git@github.com:$USER_GHUB/$REPO_GHUB $TMP_DIR
 cd $TMP_DIR
-git push --mirror git@git.epitech.eu:/$USER_BLIH/$REPO_BLIH
+git push --mirror git@git.epitech.eu:$USER_BLIH/$REPO_BLIH
 
-cd ..
+cd $OLDPWD
 rm -rf $TMP_DIR
