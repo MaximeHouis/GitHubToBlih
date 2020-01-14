@@ -3,15 +3,16 @@ Synchronize your GitHub repository to blih. (Epitech)
 
 ## Install
 
-* You can download the script using the following command:
+Clone the repository or download the script directly by using the following command:
 ```sh
 wget https://raw.githubusercontent.com/MaximeHouis/GitHubToBlih/master/github_to_blih
 ```
 
-* Edit the script to provide your blih and GitHub logins:
+* GitHub and blih usernames  
+You can define the `USER_GHUB` and `USER_BLIH` environment variables containing your corresponding usernames. If you don't want your usernames stored in the environment, you can [edit the script](github_to_blih#L16) in order to provide them directly:
 ```sh
-USER_GHUB="GITHUB_USERNAME_HERE"
-USER_BLIH="BLIH_LOGIN_HERE"
+USER_GHUB="$USER_GHUB"
+USER_BLIH="$USER_BLIH"
 ```
 
 * If you want to access the script from anywhere, add it to your PATH.
@@ -29,5 +30,9 @@ If your GitHub repository name is different from the blih one, edit the script a
 
 ## Synchronize periodically
 
-You can setup the script to run on a server (VPS, Raspberry Pi, ...).  
-You could for example setup a cron job or a service to run the script every x minutes.
+You can install the script to run on a server (VPS, Raspberry Pi, ...).  
+You could, for example, setup a cron job or a service to run the script every x minutes.
+
+## Contribute
+
+Feel free to submit pull requests or suggestions! :)
