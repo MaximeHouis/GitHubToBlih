@@ -8,7 +8,6 @@ Clone the repository or download the script directly by using the following comm
 wget https://raw.githubusercontent.com/MaximeHouis/GitHubToBlih/master/github_to_blih
 ```
 
-* GitHub and blih usernames  
 You can define the `USER_GHUB` and `USER_BLIH` environment variables containing your corresponding usernames. If you don't want your usernames stored in the environment, you can [edit the script](github_to_blih#L16) in order to provide them directly:
 ```sh
 USER_GHUB="$USER_GHUB"
